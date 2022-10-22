@@ -1,16 +1,20 @@
 <html>
-    <head></head>
+    <head>
+        <title>My First Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
-        <div class='navbar'></div>
+        <div class='navbar'>
+            <a href='index.html'>Home</a>
+            <a href='about.html'>About</a>
+        </div>
         <div class='content'>
             <h1>
                 imgur...but for Audio
             </h1>
-            <div class='upload'>
-                <form action='/upload' method='post' enctype='multipart/form-data'>
-                    <input type='file' name='file' />
-                </form>
-            </div>
+            <button>
+                <a href='upload.html'>Upload</a>
+            </button>
         </div>
     </body>
 </html>
