@@ -51,15 +51,17 @@
         </div>
         <div class='content'>
             <div class='uploadoverview'>
-                <form action='/upload' method='post' enctype='multipart/form-data'>
-                    <input type='file' name='file' />
-                </form>
-                <h3>Title</h3>
-                <textarea name='title' rows='1' cols='50'></textarea>
-                <h4>Description</h4>
-                <textarea name='title' rows='1' cols='50'></textarea>
-                <form action='song.html' method='post' enctype='multipart/form-data'>
-                    <input type='submit' value='Next' />
+                <form>
+                    <form action='/upload' method='post' enctype='multipart/form-data'>
+                        <input type='file' name='file' />
+                    </form>
+                    <h3>Title</h3>
+                    <textarea name='titleArea' rows='1' cols='50'></textarea>
+                    <h4>Description</h4>
+                    <textarea name='descriptionArea' rows='1' cols='50'></textarea>
+                    <form action='song.html' method='post' enctype='multipart/form-data'>
+                        <input type='submit' value='Next' />
+                    </form>
                 </form>
             </div>
         </div>
