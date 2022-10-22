@@ -1,15 +1,16 @@
 body { 
     margin: 0;
-    /* background: url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
+    background: url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
+    background-size: cover;
 }
 
 /* Add a black background color to the top navigation */
 .navbar {
     background-color: #333;
+    opacity: 0.5;
     overflow: hidden;
 }
   
@@ -40,6 +41,22 @@ body {
 }
 
 .content h1 {
-    font-size: 50px;
-    /* color: white; */
+    margin-top: 100px;
+    font-family: 'Inter' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 155px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.content button {
+    background: #21BA83;
+    position: absolute;
+    width: 382px;
+    height: 120px;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
