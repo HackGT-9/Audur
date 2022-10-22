@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>My First Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class='navbar'>
+            <a href='index.html'>Home</a>
+            <a href='about.html'>About</a>
+        </div>
+        <div class='content'>
+            <div class='uploadoverview'>
+                <form action='/upload' method='post' enctype='multipart/form-data'>
+                    <input type='file' name='file' />
+                </form>
+                <h3>Title</h3>
+                <textarea name='title' rows='1' cols='50'></textarea>
+                <h4>Description</h4>
+                <textarea name='title' rows='1' cols='50'></textarea>
+                <form action='song.html' method='post' enctype='multipart/form-data'>
+                    <input type='submit' value='Next' />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
