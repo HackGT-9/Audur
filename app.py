@@ -39,7 +39,6 @@ def song_page():
         return render_template('song.html', tit=info['titleArea'], desc=info['descriptionArea'], pth=".\\\\"+paath)
 @app.route('/uploads/<path:filename>')
 def download_file(filename):
-    print(app.config['UPLOAD_FOLDER'], filename)
     return send_file(app.config['UPLOAD_FOLDER']+'\\'+filename)
     #return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 if __name__ == '__main__':
