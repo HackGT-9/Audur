@@ -1,3 +1,5 @@
+https://devpost.com/software/audur
+
 # Inspiration
 In creating the idea for Audur, we were heavily inspired by the popular image sharing service called Imgur which allows users to share images without the need of creating an account or logging in beforehand. Although services like Google Drive and Soundcloud are popular means of sharing files, they come with the downside of having to login and the files being tied to that user which can potentially leave the user’s information exposed. So we wanted to create an alternative way to share audio files that is both quick and more secure.
 
