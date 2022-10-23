@@ -25,7 +25,6 @@ def song_page():
         info = request.form
         file = request.files['file']
         fin = file.filename
-        print(fin)
         res_p = os.path.join(app.config['UPLOAD_FOLDER'], (fin).replace("/", "\\\\"))
         res_p = res_p.replace("/", "\\")
         #rep = "\\"+fin
