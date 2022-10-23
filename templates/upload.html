@@ -8,7 +8,7 @@
     <style>
         body {
           margin: 0;
-          background: url("https://tinyurl.com/mu7m9wby") no-repeat center center
+          background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
             fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -20,6 +20,10 @@
         .navbar {
           background: rgba(205, 205, 205, 0.13);
           overflow: hidden;
+        }
+
+        .right-aligned {
+          position: absolute;
         }
 
         /* Style the links inside the navigation bar */
@@ -58,7 +62,6 @@
         }
 
         .uploadoverview {
-          position: absolute;
           position: absolute;
           width: 731px;
           height: 450px;
@@ -99,7 +102,7 @@
           font-size: 25px;
           line-height: 30px;
           width: 125px;
-          height: 30px;
+          height: 36px;
           left: 50%;
           top: 40%;
           color: white;
@@ -136,30 +139,24 @@
           padding: 3px 10px;
       }
 
-      label {
-          -webkit-appearance: button;
-          -moz-appearance: button;
-          appearance: button;
-          line-height: 16px;
-          padding: .2em .4em;
-          margin: .2em;
-          border: 1px solid #000000;
-          width: 86%;
-          height: 20px;
-        }
+      input[type="file"] {
+        width: 87.5%;
+      }
     </style>
   </head>
   <body>
-    <div class="navbar">
-      <a href="about.html">About</a>
-      <a href="index.html">Home</a>
+    <div class='navbar'>
+      <div class="right-aligned">
+          <a href='index.html'>Audur</a>
+      </div>
+        <a href='about.html'>About</a>
+        <a href='index.html'>Home</a>
     </div>
     <div class="content">
       <div class="uploadoverview">
         <h1>Upload</h1>
         <form action="song.html" method="post" enctype="multipart/form-data">
-          <label for="file">Choose file</label>
-          <input type="file" id="file" name="file" style="display: none" />
+          <input type="file" id="file" name="file" />
           <h3>Title</h3>
           <input
             type="text"

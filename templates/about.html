@@ -1,11 +1,11 @@
 <html>
     <head>
-        <title>About AudioShare</title>
+        <title>About Audur</title>
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <style>
             body { 
                 margin: 0;
-                background: url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -16,6 +16,10 @@
             .navbar {
                 background: rgba(205, 205, 205, 0.13);
                 overflow: hidden;
+            }
+
+            .right-aligned {
+                position: absolute;
             }
             
             /* Style the links inside the navigation bar */
@@ -50,19 +54,43 @@
 
             .content h1 {
                 font-size: 50px;
-                /* color: white; */
+                font-family: 'Inter' !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 50px;
+                line-height: 155px;
+                color: #FFFFFF;
+            }
+
+            .content p {
+                font-size: 50px;
+                font-family: 'Inter' !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                margin-left: 25%;
+                top: 35%;
+                width: 50%;
+                color: #FFFFFF;
             }
         </style>
     </head>
     <body>
         <div class='navbar'>
+            <div class="right-aligned">
+                <a href='index.html'>Audur</a>
+            </div>
             <a href='about.html'>About</a>
             <a href='index.html'>Home</a>
         </div>
         <div class='content'>
-            <h1>
-                About Page
-            </h1>
+            <h1>About Audur</h1>
+            <p>
+                Imgur is a popular image hosting site, where individuals can share images with one another without the need of creating an account. 
+                However, what if there was a similar system that allows individuals to easily share audio files? Although services like Google Drive 
+                and DropBox may allow sharing of audio files, they require users to create an account beforehand. With our service, Audur, individuals 
+                can upload an audio file (.mp3, .mp4, .wav, etc.) onto the site, which generates a shareable link for others to access.
+            </p>
         </div>
     </body>
 </html>
