@@ -1,8 +1,8 @@
 import os
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_file
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'C:\\\\Users\\\\sthelluri1\\\\Desktop\\\\HackGT2022\\\\uploads'
+app.config['UPLOAD_FOLDER'] = 'C:\\Users\\sthelluri1\\Desktop\\HackGT2022\\uploads'
 @app.route('/')
 def hello():
 	return render_template("index.html")
@@ -25,17 +25,23 @@ def song_page():
         info = request.form
         file = request.files['file']
         fin = file.filename
+        print(fin)
         res_p = os.path.join(app.config['UPLOAD_FOLDER'], (fin).replace("/", "\\\\"))
+        res_p = res_p.replace("/", "\\")
+        #rep = "\\"+fin
+        #res_p = res_p.replace(rep, "\\\\"+fin)
         file.save(res_p)
-        print(res_p, fin)
-        rep = "\\"+fin
-        res_p = res_p.replace(rep, "\\\\"+fin)
-        print(res_p)
-        return render_template('song.html', tit=info['titleArea'], desc=info['descriptionArea'], pth=res_p)
-@app.route('/uploads//<path:filename>')
+        #print(res_p, fin)
+        #rep = "\\"+fin
+        #res_p = res_p.replace(rep, "\\\\"+fin)
+        stuff = res_p.split("\\")
+        paath = stuff[-2]+"\\\\\\\\"+stuff[-1]
+        return render_template('song.html', tit=info['titleArea'], desc=info['descriptionArea'], pth=".\\\\"+paath)
+@app.route('/uploads/<path:filename>')
 def download_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'],
-                               filename, as_attachment=True)
+    print(app.config['UPLOAD_FOLDER'], filename)
+    return send_file(app.config['UPLOAD_FOLDER']+'\\'+filename)
+    #return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True, port=5000)
 
