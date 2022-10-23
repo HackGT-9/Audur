@@ -1,10 +1,7 @@
 <html>
   <head>
-    <title>My First Page</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter"
-      rel="stylesheet"
-    />
+    <title>Upload Song</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet"/>
     <style>
       body {
         margin: 0;
@@ -38,7 +35,7 @@
 
       /* Change the color of links on hover */
       .navbar a:hover {
-        background-color: #ddd;
+        background: rgba(205, 205, 205, 0.13);
         color: black;
       }
 
@@ -87,7 +84,6 @@
 
       input[type="file"] {
         left: 5%;
-        color: transparent;
       }
 
       .uploadoverview forum {
@@ -95,14 +91,49 @@
       }
 
       input[type="submit"] {
+        margin-top: 1%;
+        margin-left: 50%;
         font-size: 50px;
         font-family: "Inter" !important;
         font-style: normal;
         font-weight: 400;
-        font-size: 110px;
-        line-height: 155px;
-        color: #ffffff;
+        font-size: 50px;
+        line-height: 30px;
+        width: 227px;
+        height: 76px;
+        left: 50%;
+        top: 40%;
+        color: white;
+        background: #21ba83;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
+
+      .uploadoverview h3 {
+        position: relative;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 39px;
+        text-align: left;
+        left: 6.5%;
+        top: 10%;
+        font-size: 25px;
+        color: #000000;
+      }
+
+      input[type="text"] {
+        text-align: left !important;
+        background-color: transparent;
+        color: #000000;
+        outline: none;
+        outline-style: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #000000;
+        padding: 3px 10px;
+    }    
     </style>
   </head>
   <body>
@@ -114,16 +145,11 @@
       <div class="uploadoverview">
         <h1>Upload</h1>
         <form action="song.html" method="post" enctype="multipart/form-data">
-          <input type="file" id="file" name="file" />=
+          <input type="file" id="file" name="file" />
           <h3>Title</h3>
-          <textarea name="titleArea" id="head" rows="1" cols="50"></textarea>
-          <h4>Description</h4>
-          <textarea
-            name="descriptionArea"
-            id="desc"
-            rows="1"
-            cols="50"
-          ></textarea>
+          <input type="text" class="text-line" />
+          <h3>Description</h3>
+          <input type="text" class="text-line" />
           <br />
           <input type="submit" value="Next" />
         </form>
