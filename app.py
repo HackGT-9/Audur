@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, send_file
 
 app = Flask(__name__)
@@ -35,7 +36,6 @@ def song_page():
         stuff = res_p.split("\\")
         paath = stuff[-2]+"\\\\\\\\"+stuff[-1]
         return render_template('song.html', tit=info['titleArea'], desc=info['descriptionArea'], pth=".\\\\"+paath)
-    
 @app.route('/uploads/<path:filename>')
 def download_file(filename):
     return send_file(app.config['UPLOAD_FOLDER']+'\\'+filename)
