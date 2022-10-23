@@ -5,7 +5,7 @@
         <style>
             body { 
                 margin: 0;
-                background: url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -16,6 +16,10 @@
             .navbar {
                 background: rgba(205, 205, 205, 0.13);
                 overflow: hidden;
+            }
+
+            .right-aligned {
+                position: absolute;
             }
             
             /* Style the links inside the navigation bar */
@@ -97,12 +101,15 @@
     </head>
     <body>
         <div class='navbar'>
+            <div class="right-aligned">
+                <a href='index.html'>Audur</a>
+            </div>
             <a href='about.html'>About</a>
             <a href='index.html'>Home</a>
         </div>
         <div class='content'>
             <h1>
-                imgur...but for Audio
+                Audur
             </h1>
             <p>simple audio sharing at the tap of a button</p>
             <button>
