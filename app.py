@@ -13,7 +13,6 @@ except ImportError:
     from urllib2 import urlopen
 
 app = Flask(__name__)
-#app.config['UPLOAD_FOLDER'] = 'C:\\Users\\sthelluri1\\Desktop\\HackGT2022\\uploads'
 app.config['UPLOAD_FOLDER'] = '/home/ec2-user/AudioShare/uploads'
 
 def shorten(url):
