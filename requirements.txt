@@ -1,0 +1,4 @@
+flask
+flask_wtf
+WTForms
+flask-uploads
