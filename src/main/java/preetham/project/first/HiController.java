@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+// This is my first Spring Boot app ever, so glad to have pulled it off!
 @Controller
 public class HiController {
 
@@ -63,14 +64,15 @@ public class HiController {
             // System.out.println("File saved to: " + absolutePath);
 
             //redirectAttributes.addFlashAttribute("message", "File uploaded successfully: " + file.getOriginalFilename());
-        } catch (IOException el) {
-            el.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
             //redirectAttributes.addFlashAttribute("message", "Failed to upload file");
         }
         absolutePath = absolutePath.replace("\\", "/");
         model.addAttribute("title", title);
         model.addAttribute("desc", description);
         model.addAttribute("pth", "/audio/"+f_name);
+        model.addAttribute("link", "/audio/"+f_name);
         return "song";
     }
 
