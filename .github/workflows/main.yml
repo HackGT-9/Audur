@@ -32,8 +32,8 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: run this thing
       run: |
-        javac FirstApplication.java
-        java FirstApplication
+        javac src/main/java/preetham/project/first/FirstApplication.java
+        java src/main/java/preetham/project/first/FirstApplication
     # - name: Build with Gradle
     #   uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
     #   with:
