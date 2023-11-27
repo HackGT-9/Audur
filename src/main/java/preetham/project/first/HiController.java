@@ -47,7 +47,7 @@ public class HiController {
         String title = request.getParameter("titleArea");
         String description = request.getParameter("descriptionArea");
         //MultipartFile file = request.getParameter("file");
-        String upload_dir = "C:\\Users\\sthelluri1\\Desktop\\first\\src\\main\\resources\\static";
+        String upload_dir = "C:\\Users\\sthelluri1\\Desktop\\first\\src\\main\\resources\\static\\audio";
         // System.out.println(title);
         // System.out.println(description);
         String f_name = f.getOriginalFilename();
