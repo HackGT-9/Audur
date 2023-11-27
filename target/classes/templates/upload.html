@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <title>Upload Song</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+          margin: 0;
+          background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://tinyurl.com/mu7m9wby") no-repeat center center fixed;
+            fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+
+        /* Add a black background color to the top navigation */
+        .navbar {
+          background: rgba(205, 205, 205, 0.13);
+          overflow: hidden;
+        }
+
+        .right-aligned {
+          position: absolute;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+          float: right;
+          text-align: center;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 39px;
+          color: #ffffff;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+          background: rgba(205, 205, 205, 0.13);
+          color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .navbar a.active {
+          background-color: #04aa6d;
+          color: white;
+        }
+
+        .content {
+          text-align: center;
+        }
+
+        .content h1 {
+          font-size: 50px;
+          /* color: white; */
+        }
+
+        .uploadoverview {
+          position: absolute;
+          width: 731px;
+          height: 450px;
+          left: 30%;
+          top: 25%;
+          background: #d9d9d9;
+          border-radius: 15px;
+        }
+
+        .uploadoverview h1 {
+          position: relative;
+          width: 167px;
+          height: 58px;
+          left: 5%;
+          top: 2.5%;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 58px;
+          color: #000000;
+        }
+
+          margin-left: 5%;
+        }
+
+        .uploadoverview forum {
+          left: 10%;
+        }
+
+        input[type="submit"] {
+          margin-top: 3.5%;
+          margin-left: 66%;
+          font-size: 50px;
+          font-family: "Inter" !important;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 30px;
+          width: 125px;
+          height: 36px;
+          left: 50%;
+          top: 40%;
+          color: white;
+          background: #21ba83;
+          border: 1px solid #000000;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 15px;
+        }
+
+        .uploadoverview h3 {
+          position: relative;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          line-height: 39px;
+          text-align: left;
+          left: 6.5%;
+          top: 10%;
+          font-size: 25px;
+          color: #000000;
+        }
+
+        input[type="text"] {
+          text-align: left !important;
+          background-color: transparent;
+          color: #000000;
+          outline: none;
+          outline-style: none;
+          width: 86%;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid #000000;
+          padding: 3px 10px;
+      }
+
+      input[type="file"] {
+        width: 87.5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='navbar'>
+      <div class="right-aligned">
+          <a href='index.html'>Audur</a>
+      </div>
+        <a href='about.html'>About</a>
+        <a href='index.html'>Home</a>
+    </div>
+    <div class="content">
+      <div class="uploadoverview">
+        <h1>Upload</h1>
+        <form action="song.html" method="post" enctype="multipart/form-data">
+          <input type="file" id="file" name="file" accept=".mp3,audio/*"/>
+          <h3>Title</h3>
+          <input
+            type="text"
+            name="titleArea"
+            id="titleArea"
+            class="text-line"
+          />
+          <h3>Description</h3>
+          <input
+            type="text"
+            name="descriptionArea"
+            id="descriptionArea"
+            class="text-line"
+          />
+          <br />
+          <input type="submit" value="Next" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
